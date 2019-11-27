@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="126.854981">
+<testcase classname="Shoppingcart" name="Validate the addition of tshirt in shopping cart" time="91.832002">
+<system-out><![CDATA[Given The website to order is available.....................................passed
+When i am able to login using valid credentials.............................passed
+And i enter "T-Shirt" in Search Box.........................................passed
+When i check Tshirt is inStock..............................................passed
+And i click Add to cart button..............................................passed
+Then i get shopping cart summary and tshirt ordered.........................passed
+And i verify order details on order confirmation page.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shoppingcart" name="Validate the change of First Name" time="35.022979">
+<system-out><![CDATA[Given The website to order is available.....................................passed
+When i am able to login using valid credentials.............................passed
+And i click on MyAccountPage Link...........................................passed
+When i click on My personalinfo Page........................................passed
+And i change My first name..................................................passed
+Then i am able to saveInfo..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

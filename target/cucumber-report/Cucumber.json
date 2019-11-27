@@ -1,0 +1,287 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-11-27T15:38:36.185Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10311483196,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Validate the addition of tshirt in shopping cart",
+        "description": "",
+        "id": "shoppingcart;validate-the-addition-of-tshirt-in-shopping-cart",
+        "after": [
+          {
+            "result": {
+              "duration": 1217537369,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 23533895348,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "The website to order is available",
+            "match": {
+              "location": "ShoppingCartStepDef.theWebsiteToOrderIsAvailable(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Title"
+                ]
+              },
+              {
+                "cells": [
+                  "My Store"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 14951111744,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "i am able to login using valid credentials",
+            "match": {
+              "location": "ShoppingCartStepDef.iAmAbleToLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 247229272,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "i enter \"T-Shirt\" in Search Box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "T-Shirt",
+                  "offset": 9
+                }
+              ],
+              "location": "ShoppingCartStepDef.iClickOnTshirtLink(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6298488906,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "i check Tshirt is inStock",
+            "match": {
+              "location": "ShoppingCartStepDef.iCheckTshirtIsInStock()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9409508369,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "i click Add to cart button",
+            "match": {
+              "location": "ShoppingCartStepDef.iClickAddToCartButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18538876034,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "i get shopping cart summary and tshirt ordered",
+            "match": {
+              "location": "ShoppingCartStepDef.iGetShoppingCartSummaryAndTshirtAddedInCart()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7277688618,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "i verify order details on order confirmation page",
+            "match": {
+              "location": "ShoppingCartStepDef.iVerifyOrderDetailsOnOrderConfirmationPage()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@OrderTshirt"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2019-11-27T15:40:08.103Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7600601825,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup(Scenario)"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Validate the change of First Name",
+        "description": "",
+        "id": "shoppingcart;validate-the-change-of-first-name",
+        "after": [
+          {
+            "result": {
+              "duration": 870675724,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12574498479,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The website to order is available",
+            "match": {
+              "location": "ShoppingCartStepDef.theWebsiteToOrderIsAvailable(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Title"
+                ]
+              },
+              {
+                "cells": [
+                  "My Store"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6447554444,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "i am able to login using valid credentials",
+            "match": {
+              "location": "ShoppingCartStepDef.iAmAbleToLogin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1609998694,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "i click on MyAccountPage Link",
+            "match": {
+              "location": "ShoppingCartStepDef.iClickOnMyAccountPageLink()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2328940788,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "i click on My personalinfo Page",
+            "match": {
+              "location": "ShoppingCartStepDef.iClickOnMyPersonalinfoPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3070816149,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "i change My first name",
+            "match": {
+              "location": "ShoppingCartStepDef.iChangeMyFirstName(String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstName"
+                ]
+              },
+              {
+                "cells": [
+                  "Updated"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 497568440,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "i am able to saveInfo",
+            "match": {
+              "location": "ShoppingCartStepDef.iAmAbleToSaveInfo()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ChangeFisrtName"
+          }
+        ]
+      }
+    ],
+    "name": "Shoppingcart",
+    "description": "",
+    "id": "shoppingcart",
+    "keyword": "Feature",
+    "uri": "classpath:cucumber/Order.feature",
+    "tags": []
+  }
+]
