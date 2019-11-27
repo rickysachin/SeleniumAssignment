@@ -1,0 +1,13 @@
+%2019-%54-%27 %19:%11:%483 0 INFO  [main] - XXXXXXXXXXXXXXXXXXXXXXX-S---T---A---R---T-XXXXXXXXXXXXXXXXXXXXXX
+%2019-%54-%27 %19:%11:%620 137 INFO  [main] - Current scenario executing :Validate the addition of tshirt in shopping cart
+%2019-%55-%27 %19:%11:%235 44752 INFO  [main] - Opening the browser
+%2019-%55-%27 %19:%11:%483 48000 INFO  [main] - Able to open website
+%2019-%55-%27 %19:%11:%369 48886 INFO  [main] - starting to login
+%2019-%55-%27 %19:%11:%898 70415 INFO  [main] - Able to verify product selected is in stock
+%2019-%56-%27 %19:%11:%1 119518 INFO  [main] - The extracted order summary is Your order on My Store is complete. Please send us a bank wire with - Amount $18.51 - Name of account owner Pradeep Macharla - Include these details xyz - Bank name RTP - Do not forget to insert your order reference QHBJVCGYK in the subject of your bank wire. An email has been sent with this information. Your order will be sent as soon as we receive payment. If you have questions, comments or concerns, please contact our expert customer support team. .
+%2019-%56-%27 %19:%11:%582 122099 INFO  [main] - Current scenario executing :Validate the change of First Name
+%2019-%57-%27 %19:%11:%520 155037 INFO  [main] - Opening the browser
+%2019-%57-%27 %19:%11:%838 156355 DEBUG [Finalizer thread] - Connection manager is shutting down
+%2019-%57-%27 %19:%11:%839 156356 DEBUG [Finalizer thread] - Connection manager shut down
+%2019-%57-%27 %19:%11:%327 156844 INFO  [main] - Able to open website
+%2019-%57-%27 %19:%11:%332 156849 INFO  [main] - starting to login
