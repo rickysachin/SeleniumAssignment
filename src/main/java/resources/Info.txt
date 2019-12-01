@@ -1,0 +1,1 @@
+The page object model implemented have layers of reusability and its independent of browsers
