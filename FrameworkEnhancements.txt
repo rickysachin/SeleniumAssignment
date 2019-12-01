@@ -4,10 +4,9 @@ The current solution can be enchanced to build a framework .Following things can
 2.Capturing snaphots for pass steps as well
 3.Increasing more reusability in terms of refing some functions for selenium webdriver related
 4.Currently it is having basic reports json,xml and .html.It can be extended to use more detailed reporting.Also listeners can be customized based upon requirement.
-5.To incorporate parallel run on cross browser or mutiple machine need to use selenium grid and for infrastructure support can use docker containers or saucelabs
-6.To support more features one can used different feature files and also the reusability of steps can be increased.
-7.More asert can be added depends upon business requirement and event triggers so that exceptions can be properly traced and its a controlled failure.
-8.In case of application which require more data can be read from excel file.
-9.The Solution can be integrated with test management tool like jira using xray plugin
-10.The solution can also be part of jenkins pipeline where it can run the cucmber files in test set of xray and upload json result in test execution using curl shell commands.
+5.To support more features one can used different feature files and also the reusability of steps can be increased.
+6.More asert can be added depends upon business requirement and event triggers so that exceptions can be properly traced and its a controlled failure.
+7.In case of application which require more data can be read from excel file.
+8.The Solution can be integrated with test management tool like jira using xray plugin
+9.The solution can also be part of jenkins pipeline where it can run the cucmber files in test set of xray and upload json result in test execution using curl shell commands.
 
