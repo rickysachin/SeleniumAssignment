@@ -1,9 +1,10 @@
 package com.bdd.Webpages;
 import com.bdd.BasePage;
+import com.bdd.Util.Log;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 public class HomePage extends BasePage
 {
@@ -13,47 +14,68 @@ public class HomePage extends BasePage
 
     By textSearch=By.id("search_query_top");
     By buttonSearch=By.name("submit_search");
-
     By linkImage=By.cssSelector("a[class='product_img_link']");
     By buttonAddTocart=By.name("Submit");
-    By linkLogin=By.xpath("//a[@class='login']");
+    By linkLogin=By.cssSelector("a[class='login']");
 
     public Boolean enterText (String text)
     {
         try {
             waitVisibility(textSearch);
-            driver.findElement(textSearch).sendKeys(text);
+            enterText(textSearch,text);
             return true;
         }catch(Exception e)
         {
+            Log.error(e.getMessage());
             return false;
         }
     }
-    public int clickSearch ()
+    public Boolean clickSearch ()
     {
+        try
+        {
         waitVisibility(buttonSearch);
-        driver.findElement(buttonSearch).click();
-        waitVisibility(linkImage);
-        return (driver.findElements(linkImage).size());
-
+        click(buttonSearch);
+        return true;
+        }catch(Exception e)
+        {
+            Log.info(e.getMessage());
+            return false;
+        }
     }
     public Boolean clickInStock ()
     {
 
-        try{
-            WebElement element =  driver.findElement(linkImage);
-            JavascriptExecutor executor = (JavascriptExecutor)driver;
-            executor.executeScript("arguments[0].click();", element);
+        try
+        {
+            clickusingJavaScript(linkImage);
             waitVisibility(buttonAddTocart);
             return true;
-          }catch(Exception e)
+        }catch(Exception e)
         {
+            Log.error(e.getMessage());
             return false;
         }
     }
 
-    public void clickLogin () {
-        waitVisibility(linkLogin);
-        driver.findElement(linkLogin).click();
+    public Boolean clickLogin () {
+        try
+        {
+            waitVisibility(linkLogin);
+            click(linkLogin);
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
+
+    }
+
+    public Boolean IsSearchBoxPresent () {
+        if(isElementPresent(textSearch))
+            return true;
+        else
+            return false;
     }
 }

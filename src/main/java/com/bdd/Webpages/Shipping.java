@@ -1,5 +1,6 @@
 package com.bdd.Webpages;
 import com.bdd.BasePage;
+import com.bdd.Util.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,16 +12,32 @@ public class Shipping extends BasePage
     }
 
 
-    By checkTerms=By.xpath("//input[@id='cgv']");
+    By checkTerms=By.cssSelector("input[id='cgv']");
     By buttonProceedCheckout=By.xpath("//button[@name='processCarrier']//span[contains(text(),'Proceed to checkout')]");
 
 
-    public void checkTerms()
+    public Boolean checkTerms()
     {
-        driver.findElement(checkTerms).click();
+        try {
+            click(checkTerms);
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
     }
-    public void clickProceed()
+    public Boolean clickProceed()
     {
-        driver.findElement(buttonProceedCheckout).click();
+        try
+        {
+            click(buttonProceedCheckout);
+            return true;
+        }
+        catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
     }
 }

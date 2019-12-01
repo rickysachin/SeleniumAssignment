@@ -16,21 +16,30 @@ public class Hooks {
     SeleniumLibraries library=new SeleniumLibraries();
     @Before(order = 0)
     public void setup(Scenario scenario) throws Exception {
+
         baseStepDef.init();
-        Log.info("Current scenario executing :"+scenario.getName());
+        Log.info("Scenario in Execution :"+scenario.getName()+" for Browser"+BaseStepDef.BROWSER );
         if (BaseStepDef.BROWSER.equalsIgnoreCase("chrome")) {
             driver = library.setupChrome();
         } else if (BaseStepDef.BROWSER.equalsIgnoreCase("firefox"))
         {
             driver = library.setupFireFox();
         }
+        else
+        {
+            driver = library.setupChrome();
+        }
+
     }
 
     public WebDriver returndriver() {
         return driver;
     }
     @After
-    public void tearDown() {
+    public void tearDown(Scenario scenario) throws IOException {
+        BaseStepDef.captureScreenshot(driver,BaseStepDef.snapshotFile,"EndOfExecution"+scenario.getName());
+        Log.info("End Of execution for "+scenario.getName());
+        Log.endLogging();
         driver.quit();
     }
 

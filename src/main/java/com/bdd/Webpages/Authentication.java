@@ -1,5 +1,6 @@
 package com.bdd.Webpages;
 import com.bdd.BasePage;
+import com.bdd.Util.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -14,27 +15,27 @@ public class Authentication extends BasePage
 
     By inputEmail=By.cssSelector("input[id='email']");
     By inputPassword =By.cssSelector("input[id='passwd']");
-    By buttonSignIn=By.xpath("//p[@class='submit']//span[1]");
-    By linkLogout=By.cssSelector("a[class='logout']");
+    By buttonSignIn=By.cssSelector("p[class='submit'] span:nth-child(1)");
     By linkCustAccount=By.cssSelector("a[title='View my customer account']");
-    By linkuser=By.xpath("//a[@class='account']//span");
+    By linkuser=By.cssSelector("a[class='account'] span");
 
 
     public Boolean login (String user,String pwd ) {
         try {
             waitVisibility(inputEmail);
-            driver.findElement(inputEmail).sendKeys(user);
-            driver.findElement(inputPassword).sendKeys(pwd);
-            driver.findElement(buttonSignIn).click();
+            enterText(inputEmail,user);
+            enterText(inputPassword,pwd);
+            click(buttonSignIn);
             return true;
         }catch(Exception e)
         {
+            Log.error(e.getMessage());
             return false;
         }
     }
     public Boolean getUser (String user ) {
         waitVisibility(linkuser);
-        String name=driver.findElement(linkuser).getText();
+        String name=getText(linkuser);
         String fname[]=name.split(" ");
         String firstname="";
         if (fname.length>2)
@@ -55,14 +56,27 @@ public class Authentication extends BasePage
     }
 
     public Boolean clickMyaccount ( ) {
-       try {
-           int count = 0;
-           waitVisibility(linkCustAccount);
-           driver.findElement(linkCustAccount).click();
-           return true;
-       }catch(Exception e)
-       {
-           return false;
-       }
+        try {
+
+            waitVisibility(linkCustAccount);
+            click(linkCustAccount);
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
+    }
+
+    public Boolean IsCustomerLogin( ) {
+        try {
+
+            waitVisibility(linkCustAccount);
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
     }
 }

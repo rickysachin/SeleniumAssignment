@@ -1,5 +1,6 @@
 package com.bdd.Webpages;
 import com.bdd.BasePage;
+import com.bdd.Util.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,9 +12,19 @@ public class Address extends BasePage
     }
 
     By buttonProceedCheckout=By.xpath("//button[@name='processAddress']//span[contains(text(),'Proceed to checkout')]");
-    public void Proceed ( ) {
-        waitVisibility(buttonProceedCheckout);
-        driver.findElement(buttonProceedCheckout).click();
+
+    public Boolean Proceed ( ) {
+       try{
+           waitVisibility(buttonProceedCheckout);
+           click(buttonProceedCheckout);
+           return true;
+       }catch(Exception e)
+       {
+           Log.error(e.getMessage());
+           return false;
+       }
+
+
     }
 
 }

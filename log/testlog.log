@@ -1,13 +1,12 @@
-%2019-%54-%27 %19:%11:%483 0 INFO  [main] - XXXXXXXXXXXXXXXXXXXXXXX-S---T---A---R---T-XXXXXXXXXXXXXXXXXXXXXX
-%2019-%54-%27 %19:%11:%620 137 INFO  [main] - Current scenario executing :Validate the addition of tshirt in shopping cart
-%2019-%55-%27 %19:%11:%235 44752 INFO  [main] - Opening the browser
-%2019-%55-%27 %19:%11:%483 48000 INFO  [main] - Able to open website
-%2019-%55-%27 %19:%11:%369 48886 INFO  [main] - starting to login
-%2019-%55-%27 %19:%11:%898 70415 INFO  [main] - Able to verify product selected is in stock
-%2019-%56-%27 %19:%11:%1 119518 INFO  [main] - The extracted order summary is Your order on My Store is complete. Please send us a bank wire with - Amount $18.51 - Name of account owner Pradeep Macharla - Include these details xyz - Bank name RTP - Do not forget to insert your order reference QHBJVCGYK in the subject of your bank wire. An email has been sent with this information. Your order will be sent as soon as we receive payment. If you have questions, comments or concerns, please contact our expert customer support team. .
-%2019-%56-%27 %19:%11:%582 122099 INFO  [main] - Current scenario executing :Validate the change of First Name
-%2019-%57-%27 %19:%11:%520 155037 INFO  [main] - Opening the browser
-%2019-%57-%27 %19:%11:%838 156355 DEBUG [Finalizer thread] - Connection manager is shutting down
-%2019-%57-%27 %19:%11:%839 156356 DEBUG [Finalizer thread] - Connection manager shut down
-%2019-%57-%27 %19:%11:%327 156844 INFO  [main] - Able to open website
-%2019-%57-%27 %19:%11:%332 156849 INFO  [main] - starting to login
+[INFO ] 2019-12-01 12:14:40,936 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-S---T---A---R---T-XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2019-12-01 12:14:40,936 com.bdd.Util.Log - Scenario in Execution :Order T-Shirt and Verify in Order History for Browserchrome
+[INFO ] 2019-12-01 12:15:22,418 com.bdd.Util.Log - Opening the browser
+[INFO ] 2019-12-01 12:15:22,538 com.bdd.Util.Log - starting to login
+[INFO ] 2019-12-01 12:16:20,530 com.bdd.Util.Log - The extracted order summary is Your order on My Store is complete. Please send us a bank wire with - Amount $18.51 - Name of account owner Pradeep Macharla - Include these details xyz - Bank name RTP - Do not forget to insert your order reference AROPGBKZX in the subject of your bank wire. An email has been sent with this information. Your order will be sent as soon as we receive payment. If you have questions, comments or concerns, please contact our expert customer support team. .
+[INFO ] 2019-12-01 12:16:22,044 com.bdd.Util.Log - End Of execution for Order T-Shirt and Verify in Order History
+[INFO ] 2019-12-01 12:16:22,044 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-E---N---D-XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2019-12-01 12:16:24,280 com.bdd.Util.Log - Scenario in Execution :Update Personal Information First Name in My Account for Browserchrome
+[INFO ] 2019-12-01 12:17:02,212 com.bdd.Util.Log - Opening the browser
+[INFO ] 2019-12-01 12:17:02,269 com.bdd.Util.Log - starting to login
+[INFO ] 2019-12-01 12:17:21,211 com.bdd.Util.Log - End Of execution for Update Personal Information First Name in My Account
+[INFO ] 2019-12-01 12:17:21,215 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-E---N---D-XXXXXXXXXXXXXXXXXXXXXX

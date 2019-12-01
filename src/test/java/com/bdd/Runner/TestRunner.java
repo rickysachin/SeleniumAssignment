@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         features = "classpath:cucumber/Order.feature",
         // features = "@target/rerun.txt",
         glue = "com.bdd.StepDefs",
-        //tags = {"@ChangeFisrtName"},
+        //tags = {"@ChangeFirstName"},
         dryRun = false,
         monochrome = true,
         plugin = {"pretty", "html:target/cucumber-report/com.test",

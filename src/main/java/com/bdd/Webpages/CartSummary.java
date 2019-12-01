@@ -1,5 +1,6 @@
 package com.bdd.Webpages;
 import com.bdd.BasePage;
+import com.bdd.Util.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,34 +15,59 @@ public class CartSummary extends BasePage
     public CartSummary(WebDriver driver) {
         super(driver);
     }
-    By linkYourlaga=By.xpath("//a[@title='My Store']");
+
     By buttonAddTocart=By.name("Submit");
     By linkProceedCheckout=By.xpath("//span[contains(text(),'Proceed to checkout')]");
     By spanProceedCheckout=By.xpath("//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]");
 
-    public void addtocart () {
-        waitVisibility(buttonAddTocart);
-        driver.findElement(buttonAddTocart).click();
+    public Boolean addtocart () {
+        try
+        {
+            waitVisibility(buttonAddTocart);
+            click(buttonAddTocart);
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
+
     }
 
-    public Boolean proceedToChecout ()  {
-       try {
-           waitVisibility(linkProceedCheckout);
-           driver.findElement(linkProceedCheckout).click();
-           waitVisibility(spanProceedCheckout);
-           return true;
-       }catch(Exception e)
-       {
-           return false;
-       }
+    public Boolean proceedToCheckout()  {
+        try
+        {
+            waitVisibility(linkProceedCheckout);
+            click(linkProceedCheckout);
+
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
     }
 
-    public void confirmCheckout()
+    public Boolean confirmCheckout()
     {
-
-        driver.findElement(spanProceedCheckout).click();
+        try
+        {
+            click(spanProceedCheckout);
+            return true;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return false;
+        }
     }
-    public void isPresentYourlaga () {
-        waitVisibility(linkYourlaga);
+    public Boolean isPresentProceedCheckout () {
+        try
+        {
+            waitVisibility(spanProceedCheckout);
+            return true;
+        } catch (Exception e) {
+            Log.error(e.getMessage());
+            return false;
+        }
     }
 }

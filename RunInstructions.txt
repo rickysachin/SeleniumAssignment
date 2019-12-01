@@ -1,5 +1,6 @@
 The solution is build on top of openjdk version "1.8.0_202" and is a maven solution running on Apache Maven 3.5.2 using Intellij community edition.
-As of now it runs only on Chrome browser 
+As of now it runs only on Chrome & Firefox browser and switch can be change from config file located at \SeleniumAssignment\src\test\resources\properties\config.properties file.
+By default it is set to chrome
 
 The Feature files can be run in mutiple ways
 
@@ -20,3 +21,6 @@ make sure  rerun.txt in D:\Seleniumbased\target has some entry populated which h
 
 Under following folder reports are generated in three formats xml,json and html after run is completed
 D:\SeleniumAssignment\target\cucumber-report\
+
+
+Also this soultion eliminates the dependency on chrome driver or gecodriver.It uses webdrivermanager to manage those hence easier and reduces unneccesary size of project

@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.util.Properties;
 import com.bdd.Util.Log;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,7 @@ public class BaseStepDef {
     public static String PWD;
     public static String logfile=System.getProperty("user.dir")+"/log/testlog.log";
     public static String snapshotFile=System.getProperty("user.dir")+"/Snapshot/";
+    public static String log4jFile=System.getProperty("user.dir")+"/src/test/resources/properties/log4j.properties";
     public static Boolean IsInitialized=false;
 
     public void init() throws IOException {
@@ -33,7 +35,8 @@ public class BaseStepDef {
                 IsInitialized=true;
                 FileUtils.write(new File(logfile), "", "ISO-8859-1");
                 deleteAllFiles(snapshotFile);
-                Log log = new Log();
+
+                PropertyConfigurator.configure(log4jFile);
                 Log.startLogging();
                 input = new FileInputStream(configProperty);
                 config.load(input);
@@ -66,7 +69,7 @@ public class BaseStepDef {
         File dir = new File(path);
         File[] listFiles = dir.listFiles();
         for(File file : listFiles){
-           file.delete();
+            file.delete();
         }
     }
 

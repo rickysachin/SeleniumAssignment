@@ -1,15 +1,12 @@
 package com.bdd.Util;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+
 
 public class Log {
 
 // Initialize Log4j logs
-    public Log()
-    {
-        PropertyConfigurator.configure(System.getProperty("user.dir")+"/src/main/resources/log4j.properties");
-    }
+
     private static Logger Log = Logger.getLogger(Log.class.getName());
 
     public static void startLogging() {

@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Validate the addition of tshirt in shopping cart",
+  "name": "Order T-Shirt and Verify in Order History",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -18,80 +18,48 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "The website to order is available",
-  "rows": [
-    {
-      "cells": [
-        "Title"
-      ]
-    },
-    {
-      "cells": [
-        "My Store"
-      ]
-    }
-  ],
+  "name": "i am on the page where a product can be added to cart for a signed user",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ShoppingCartStepDef.theWebsiteToOrderIsAvailable(String\u003e\u003e)"
+  "location": "ShoppingCartStepDef.iAmOnThePageWhereAProductCanBeSearchedAndAddedToCart()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "i am able to login using valid credentials",
+  "name": "i add \"T-Shirt\" in the cart",
   "keyword": "When "
 });
 formatter.match({
-  "location": "ShoppingCartStepDef.iAmAbleToLogin()"
+  "location": "ShoppingCartStepDef.iAddInTheCart(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "i enter \"T-Shirt\" in Search Box",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ShoppingCartStepDef.iClickOnTshirtLink(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i check Tshirt is inStock",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "ShoppingCartStepDef.iCheckTshirtIsInStock()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i click Add to cart button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ShoppingCartStepDef.iClickAddToCartButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i get shopping cart summary and tshirt ordered",
+  "name": "i can view checkout page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ShoppingCartStepDef.iGetShoppingCartSummaryAndTshirtAddedInCart()"
+  "location": "ShoppingCartStepDef.iCanSeeCheckoutPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "i order a \"T-Shirt\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ShoppingCartStepDef.iOrderA(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
   "name": "i verify order details on order confirmation page",
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
   "location": "ShoppingCartStepDef.iVerifyOrderDetailsOnOrderConfirmationPage()"
@@ -103,12 +71,12 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Validate the change of First Name",
+  "name": "Update Personal Information First Name in My Account",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@ChangeFisrtName"
+      "name": "@ChangeFirstName"
     }
   ]
 });
@@ -116,85 +84,31 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "The website to order is available",
-  "rows": [
-    {
-      "cells": [
-        "Title"
-      ]
-    },
-    {
-      "cells": [
-        "My Store"
-      ]
-    }
-  ],
+  "name": "i am on the page where a user can update info",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ShoppingCartStepDef.theWebsiteToOrderIsAvailable(String\u003e\u003e)"
+  "location": "ShoppingCartStepDef.iAmOnThePageWhereAUserCanLoginAndUpdateInfo()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "i am able to login using valid credentials",
+  "name": "i change My first name to new name \"Updated\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "ShoppingCartStepDef.iAmAbleToLogin()"
+  "location": "ShoppingCartStepDef.iChangeMyFirstName(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "i click on MyAccountPage Link",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ShoppingCartStepDef.iClickOnMyAccountPageLink()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i click on My personalinfo Page",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "ShoppingCartStepDef.iClickOnMyPersonalinfoPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i change My first name",
-  "rows": [
-    {
-      "cells": [
-        "firstName"
-      ]
-    },
-    {
-      "cells": [
-        "Updated"
-      ]
-    }
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ShoppingCartStepDef.iChangeMyFirstName(String\u003e\u003e)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i am able to saveInfo",
+  "name": "i am able to check the updatedDetails",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ShoppingCartStepDef.iAmAbleToSaveInfo()"
+  "location": "ShoppingCartStepDef.iAmAbleToCheckTheUpdatedDetails()"
 });
 formatter.result({
   "status": "passed"

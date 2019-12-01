@@ -26,12 +26,17 @@ public class SeleniumLibraries {
     }
 
     public WebDriver setupFireFox() {
-       WebDriverManager.firefoxdriver().setup();
-     //  System.setProperty("webdriver.firefox.bin", "C:\\Users\\sachin_khatri01\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+        WebDriverManager.firefoxdriver().setup();
+          System.setProperty("webdriver.firefox.bin", "C:\\Users\\sachin_khatri01\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
         driver = new FirefoxDriver();
         //Maximize Window
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        return driver;
+    }
+
+    public WebDriver setURL(String url) {
+        driver.get(url);
         return driver;
     }
 
