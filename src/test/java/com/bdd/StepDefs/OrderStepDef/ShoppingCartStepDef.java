@@ -53,9 +53,10 @@ public class ShoppingCartStepDef extends BaseStepDef{
         {
             Assert.fail("could not click back to summary");
         }
+        Log.info("Able to click back to summary on order confirmation page");
         Boolean sucess = ordercon.verifyOrder(reference);
         Assert.assertEquals(sucess, true);
-        Log.info("The extracted order summary is "+reference);
+        Log.info("Able to succesfully order and The extracted order summary is "+reference);
 
     }
 
@@ -67,23 +68,26 @@ public class ShoppingCartStepDef extends BaseStepDef{
         {
             Assert.fail("Not able to click My account Page");
         }
+        Log.info("Able to click view my account page");
         MyAccount acct=new MyAccount(driver);
         if(!acct.clickMyPersonalInfo())
         {
-            Assert.fail("Not able to click My Paersonal Info");
+            Assert.fail("Not able to click My Personal Info");
         }
+        Log.info("Able to click My personal info page");
         String user = fname.trim();
 
         if(!acct.setEditFirstName(user,BaseStepDef.PWD))
         {
             Assert.fail("Not able to set the first name as"+user);
         }
+        Log.info("Able to set the first name as "+user);
         username = user;
         result=acct.clickButtonSave();
         if(!result) {
             Assert.fail("Not able to update first name");
         }
-
+        Log.info("Able to save the updated info");
     }
 
 
@@ -99,8 +103,9 @@ public class ShoppingCartStepDef extends BaseStepDef{
         result=homePage.IsSearchBoxPresent();
         if(!result)
         {
-            Assert.fail("Not able to navigate to page where i can search a product");
+            Assert.fail("Not able to navigate to page where a product can be searched");
         }
+        Log.info("able to navigate to page where a product can be searched");
 
         Log.info("starting to login");
         if(!homePage.clickLogin())
@@ -113,8 +118,8 @@ public class ShoppingCartStepDef extends BaseStepDef{
         result = authen.login(user, pwd);
         if(!result) {
             Assert.fail("Failure in Login");
-            Log.error("Not able to login through application");
         }
+        Log.info("Able to login succesfully in application for user "+user);
 
     }
 
@@ -140,6 +145,8 @@ public class ShoppingCartStepDef extends BaseStepDef{
         {
             Assert.fail("Failure in Login");
         }
+        Log.info("Able to login succesfully in application for user "+user);
+
 
     }
 
@@ -151,20 +158,26 @@ public class ShoppingCartStepDef extends BaseStepDef{
         CartSummary summary = new CartSummary(driver);
         if(!homePage.enterText(Product))
             Assert.fail("Could not enter in serach box "+Product);
+        Log.info("Able to enter product name in search box");
 
         if(!homePage.clickSearch())
             Assert.fail("Could not click search button");
+        Log.info("Able to click serach button for product");
 
         if(!homePage.clickInStock())
-           Assert.fail("Could not click product link image");
+            Assert.fail("Could not click product link image");
+        Log.info("Able to click the product link image");
 
         if(!summary.addtocart())
             Assert.fail("could not click add to cart button");
+        Log.info("Able to click Add to cart Button on summary page");
         result=summary.proceedToCheckout();
         if(!result)
         {
-           Assert.fail("Could not click proceed to checkout");
+            Assert.fail("Could not click proceed to checkout");
         }
+        Log.info("Able to click proceed to checkout on summary page");
+
 
     }
 
@@ -173,7 +186,7 @@ public class ShoppingCartStepDef extends BaseStepDef{
         CartSummary summary = new CartSummary(driver);
         if(!summary.isPresentProceedCheckout())
         {
-           Assert.fail("proceed to checkout page is present");
+            Assert.fail("proceed to checkout page is present");
         }
     }
 
@@ -182,7 +195,7 @@ public class ShoppingCartStepDef extends BaseStepDef{
         Authentication authen = new Authentication(driver);
         if(!authen.IsCustomerLogin())
         {
-           Assert.fail("Customer is not able to Login");
+            Assert.fail("Customer is not able to Login");
         }
     }
 
@@ -192,35 +205,40 @@ public class ShoppingCartStepDef extends BaseStepDef{
         CartSummary summary = new CartSummary(driver);
         if(!summary.confirmCheckout())
         {
-          Assert.fail("Could not click confirm checkout on summary page");
+            Assert.fail("Could not click confirm checkout on summary page");
         }
+        Log.info("Able to click confirm checkout");
         Address address = new Address(driver);
         if(!address.Proceed())
         {
-           Assert.fail("Could not click proceed on addrress page");
+            Assert.fail("Could not click proceed on addrress page");
         }
+        Log.info("Able to click proceed button address page");
         Shipping ship = new Shipping(driver);
         if(!ship.checkTerms())
         {
             Assert.fail("Could not click terms and conditions on shipping page");
         }
+        Log.info("Able to click terms and conditions on shipping page");
 
         if(!ship.clickProceed())
         {
             Assert.fail("Could not click proceed on shipping page");
         }
+        Log.info("Able to click proceed on shipping Page");
         Payment payment = new Payment(driver);
         if(!payment.clickBankwirePaymentMethod())
         {
             Assert.fail("Could not bankwire Payment method");
         }
+        Log.info("Able to select payment method bankwire");
         result=payment.confirmOrder();
         if(!result)
         {
-
             captureScreenshot(driver,BaseStepDef.snapshotFile,"ConfirmOrderError");
             Assert.fail("Could notconfirm order for"+product);
         }
+        Log.info("Able to click confirm order on payments page");
     }
 
     @Then("i am able to check the updatedDetails")
@@ -229,5 +247,6 @@ public class ShoppingCartStepDef extends BaseStepDef{
         Authentication authen = new Authentication(driver);
         Boolean success = authen.getUser(username);
         Assert.assertEquals(success, true);
+        Log.info("Able to verify the details on authenticatioon page");
     }
 }
