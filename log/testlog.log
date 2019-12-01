@@ -1,12 +1,32 @@
-[INFO ] 2019-12-01 12:14:40,936 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-S---T---A---R---T-XXXXXXXXXXXXXXXXXXXXXX
-[INFO ] 2019-12-01 12:14:40,936 com.bdd.Util.Log - Scenario in Execution :Order T-Shirt and Verify in Order History for Browserchrome
-[INFO ] 2019-12-01 12:15:22,418 com.bdd.Util.Log - Opening the browser
-[INFO ] 2019-12-01 12:15:22,538 com.bdd.Util.Log - starting to login
-[INFO ] 2019-12-01 12:16:20,530 com.bdd.Util.Log - The extracted order summary is Your order on My Store is complete. Please send us a bank wire with - Amount $18.51 - Name of account owner Pradeep Macharla - Include these details xyz - Bank name RTP - Do not forget to insert your order reference AROPGBKZX in the subject of your bank wire. An email has been sent with this information. Your order will be sent as soon as we receive payment. If you have questions, comments or concerns, please contact our expert customer support team. .
-[INFO ] 2019-12-01 12:16:22,044 com.bdd.Util.Log - End Of execution for Order T-Shirt and Verify in Order History
-[INFO ] 2019-12-01 12:16:22,044 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-E---N---D-XXXXXXXXXXXXXXXXXXXXXX
-[INFO ] 2019-12-01 12:16:24,280 com.bdd.Util.Log - Scenario in Execution :Update Personal Information First Name in My Account for Browserchrome
-[INFO ] 2019-12-01 12:17:02,212 com.bdd.Util.Log - Opening the browser
-[INFO ] 2019-12-01 12:17:02,269 com.bdd.Util.Log - starting to login
-[INFO ] 2019-12-01 12:17:21,211 com.bdd.Util.Log - End Of execution for Update Personal Information First Name in My Account
-[INFO ] 2019-12-01 12:17:21,215 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-E---N---D-XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2019-12-01 21:04:35,900 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-S---T---A---R---T-XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2019-12-01 21:04:35,901 com.bdd.Util.Log - Scenario in Execution :Order T-Shirt and Verify in Order History for Browserchrome
+[INFO ] 2019-12-01 21:05:01,665 com.bdd.Util.Log - Opening the browser
+[INFO ] 2019-12-01 21:05:02,248 com.bdd.Util.Log - able to navigate to page where a product can be searched
+[INFO ] 2019-12-01 21:05:02,248 com.bdd.Util.Log - starting to login
+[INFO ] 2019-12-01 21:05:10,044 com.bdd.Util.Log - Able to login succesfully in application for user newuser@example.com 
+[INFO ] 2019-12-01 21:05:10,255 com.bdd.Util.Log - Able to enter product name in search box
+[INFO ] 2019-12-01 21:05:14,219 com.bdd.Util.Log - Able to click serach button for product
+[INFO ] 2019-12-01 21:05:17,018 com.bdd.Util.Log - Able to click the product link image
+[INFO ] 2019-12-01 21:05:17,210 com.bdd.Util.Log - Able to click Add to cart Button on summary page
+[INFO ] 2019-12-01 21:05:22,740 com.bdd.Util.Log - Able to click proceed to checkout on summary page
+[INFO ] 2019-12-01 21:05:25,237 com.bdd.Util.Log - Able to click confirm checkout
+[INFO ] 2019-12-01 21:05:28,071 com.bdd.Util.Log - Able to click proceed button address page
+[INFO ] 2019-12-01 21:05:28,261 com.bdd.Util.Log - Able to click terms and conditions on shipping page
+[INFO ] 2019-12-01 21:05:30,805 com.bdd.Util.Log - Able to click proceed on shipping Page
+[INFO ] 2019-12-01 21:05:33,064 com.bdd.Util.Log - Able to select payment method bankwire
+[INFO ] 2019-12-01 21:05:35,772 com.bdd.Util.Log - Able to click confirm order on payments page
+[INFO ] 2019-12-01 21:05:38,526 com.bdd.Util.Log - Able to click back to summary on order confirmation page
+[INFO ] 2019-12-01 21:05:38,600 com.bdd.Util.Log - Able to succesfully order and The extracted order summary is Your order on My Store is complete. Please send us a bank wire with - Amount $18.51 - Name of account owner Pradeep Macharla - Include these details xyz - Bank name RTP - Do not forget to insert your order reference QUGNYQSJF in the subject of your bank wire. An email has been sent with this information. Your order will be sent as soon as we receive payment. If you have questions, comments or concerns, please contact our expert customer support team. .
+[INFO ] 2019-12-01 21:05:39,167 com.bdd.Util.Log - End Of execution for Order T-Shirt and Verify in Order History
+[INFO ] 2019-12-01 21:05:39,167 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-E---N---D-XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2019-12-01 21:05:40,100 com.bdd.Util.Log - Scenario in Execution :Update Personal Information First Name in My Account for Browserchrome
+[INFO ] 2019-12-01 21:06:00,276 com.bdd.Util.Log - Opening the browser
+[INFO ] 2019-12-01 21:06:00,339 com.bdd.Util.Log - starting to login
+[INFO ] 2019-12-01 21:06:06,007 com.bdd.Util.Log - Able to login succesfully in application for user newuser@example.com 
+[INFO ] 2019-12-01 21:06:07,382 com.bdd.Util.Log - Able to click view my account page
+[INFO ] 2019-12-01 21:06:09,358 com.bdd.Util.Log - Able to click My personal info page
+[INFO ] 2019-12-01 21:06:09,798 com.bdd.Util.Log - Able to set the first name as Updated
+[INFO ] 2019-12-01 21:06:12,825 com.bdd.Util.Log - Able to save the updated info
+[INFO ] 2019-12-01 21:06:13,000 com.bdd.Util.Log - Able to verify the details on authenticatioon page
+[INFO ] 2019-12-01 21:06:13,464 com.bdd.Util.Log - End Of execution for Update Personal Information First Name in My Account
+[INFO ] 2019-12-01 21:06:13,464 com.bdd.Util.Log - XXXXXXXXXXXXXXXXXXXXXXX-E---N---D-XXXXXXXXXXXXXXXXXXXXXX
