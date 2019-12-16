@@ -57,4 +57,19 @@ public class MyAccount extends BasePage
 
     }
 
+    public String getFirstNameText()
+    {
+        String text;
+        try
+        {
+            text=getTextForInputBox(editFirstName);
+            return text;
+        }catch(Exception e)
+        {
+            Log.error(e.getMessage());
+            return e.getMessage();
+        }
+
+    }
+
 }

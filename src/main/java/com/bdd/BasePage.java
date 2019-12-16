@@ -47,6 +47,10 @@ public class BasePage {
         driver.findElement(element).clear();
     }
 
+    public String getTextForInputBox(By element) {
+        return driver.findElement(element).getAttribute("value");
+    }
+
     public void openURL(String url)
     {
         driver.get(url);
