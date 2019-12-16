@@ -1,16 +1,16 @@
 package com.bdd.StepDefs.OrderStepDef;
 
-import com.bdd.StepDefs.BaseStepDef;
-import com.bdd.Webpages.*;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import com.bdd.Util.Log;
+        import com.bdd.StepDefs.BaseStepDef;
+        import com.bdd.Webpages.*;
+        import io.cucumber.java.en.And;
+        import io.cucumber.java.en.Given;
+        import io.cucumber.java.en.Then;
+        import io.cucumber.java.en.When;
+        import org.junit.Assert;
+        import org.openqa.selenium.WebDriver;
+        import com.bdd.Util.Log;
 
-import java.io.IOException;
+        import java.io.IOException;
 
 public class ShoppingCartStepDef extends BaseStepDef{
     private WebDriver driver;
@@ -54,8 +54,8 @@ public class ShoppingCartStepDef extends BaseStepDef{
             Assert.fail("could not click back to summary");
         }
         Log.info("Able to click back to summary on order confirmation page");
-        Boolean sucess = ordercon.verifyOrder(reference);
-        Assert.assertEquals(sucess, true);
+        result = ordercon.verifyOrder(reference);
+        Assert.assertEquals(result, true);
         Log.info("Able to succesfully order and The extracted order summary is "+reference);
 
     }
@@ -178,6 +178,10 @@ public class ShoppingCartStepDef extends BaseStepDef{
         }
         Log.info("Able to click proceed to checkout on summary page");
 
+        if(!summary.isPresentProceedCheckout())
+        {
+            Assert.fail("proceed to checkout page is present");
+        }
 
     }
 
@@ -241,12 +245,26 @@ public class ShoppingCartStepDef extends BaseStepDef{
         Log.info("Able to click confirm order on payments page");
     }
 
-    @Then("i am able to check the updatedDetails")
-    public void iAmAbleToCheckTheUpdatedDetails() {
-
+    @Then("i am able to check the updatedDetails as \"([^\"]*)\" under Personal Information")
+    public void iAmAbleToCheckTheUpdatedDetailsAsUnderPersonalInformation(String expFname) {
+        String fName;
         Authentication authen = new Authentication(driver);
         Boolean success = authen.getUser(username);
         Assert.assertEquals(success, true);
         Log.info("Able to verify the details on authenticatioon page");
+
+        if(!authen.clickMyaccount())
+        {
+            Assert.fail("Not able to click My account Page");
+        }
+        Log.info("Able to click view my account page");
+        MyAccount acct=new MyAccount(driver);
+        if(!acct.clickMyPersonalInfo())
+        {
+            Assert.fail("Not able to click My Personal Info");
+        }
+        Log.info("Able to click My personal info page");
+        fName=acct.getFirstNameText();
+        Assert.assertEquals(expFname,fName);
     }
 }
