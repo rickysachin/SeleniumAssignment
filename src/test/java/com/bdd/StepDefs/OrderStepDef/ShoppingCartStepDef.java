@@ -1,16 +1,16 @@
 package com.bdd.StepDefs.OrderStepDef;
 
-        import com.bdd.StepDefs.BaseStepDef;
-        import com.bdd.Webpages.*;
-        import io.cucumber.java.en.And;
-        import io.cucumber.java.en.Given;
-        import io.cucumber.java.en.Then;
-        import io.cucumber.java.en.When;
-        import org.junit.Assert;
-        import org.openqa.selenium.WebDriver;
-        import com.bdd.Util.Log;
+import com.bdd.StepDefs.BaseStepDef;
+import com.bdd.Webpages.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import com.bdd.Util.Log;
 
-        import java.io.IOException;
+import java.io.IOException;
 
 public class ShoppingCartStepDef extends BaseStepDef{
     private WebDriver driver;
@@ -265,6 +265,6 @@ public class ShoppingCartStepDef extends BaseStepDef{
         }
         Log.info("Able to click My personal info page");
         fName=acct.getFirstNameText();
-        Assert.assertEquals(expFname,fName);
+        Assert.assertEquals(expFname.trim().toUpperCase(),fName.trim().toUpperCase());
     }
 }
